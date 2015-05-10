@@ -34,11 +34,11 @@ Push special offers for users in you near location:
 
 Users search for special offers in your near location:
 
-![](https://github.com/mkloubert-mayersche/Retailigence/master/concept/Introducing_1of2.jpg)
+![](https://github.com/mkloubert-mayersche/Retailigence/blob/master/concept/Introducing_1of2.jpg)
 
 Select an offer you like and pay directly:
 
-![](https://github.com/mkloubert-mayersche/Retailigence/master/concept/Introducing_2of2.jpg)
+![](https://github.com/mkloubert-mayersche/Retailigence/blob/master/concept/Introducing_2of2.jpg)
 
 Connect to API like Wunderbar to provide offers with specific conditions:
 
