@@ -26,7 +26,7 @@ An offer is also pushed to social networks like Google+, Facebook or Twitter.
 
 ### Screenshots ###
 
-![](https://raw.githubusercontent.com/mkloubert-mayersche/Retailigence/master/concept/retailigence_landingpage.jpg)
+![](https://github.com/mkloubert-mayersche/Retailigence/master/concept/retailigence_landingpage.jpg)
 
 Push special offers for users in you near location:
 
@@ -34,11 +34,11 @@ Push special offers for users in you near location:
 
 Users search for special offers in your near location:
 
-![](https://raw.githubusercontent.com/mkloubert-mayersche/Retailigence/master/concept/Introducing_1of2.jpg)
+![](https://github.com/mkloubert-mayersche/Retailigence/master/concept/Introducing_1of2.jpg)
 
 Select an offer you like and pay directly:
 
-![](https://raw.githubusercontent.com/mkloubert-mayersche/Retailigence/master/concept/Introducing_2of2.jpg)
+![](https://github.com/mkloubert-mayersche/Retailigence/master/concept/Introducing_2of2.jpg)
 
 Connect to API like Wunderbar to provide offers with specific conditions:
 
