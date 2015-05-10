@@ -1,0 +1,126 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Retelligence API
+  description: Move your app forward with the Uber API
+  version: "0.0.1"
+# the domain of the service
+host: localhost
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /Retelligence
+produces:
+  - application/json
+paths:
+  /offers/{deviceId}/{longitude}/{latitude}:
+    get:
+      summary: List of personlized offers.
+      description: |
+        Returns a list of offers for the specific owner of a device by
+        submitting the geo coordinates.
+        The call will use the SPHERE.IO API to search in the product database to look for offers.
+      parameters:
+        - name: deviceId
+          in: query
+          description: The ID of the device that asks for the offers.
+          required: true
+          type: string
+        - name: longitude
+          in: query
+          description: Longitude component of location.
+          required: true
+          type: number
+          format: double
+        - name: latitude
+          in: query
+          description: Latitude component of location.
+          required: true
+          type: number
+          format: double
+      responses:
+        200:
+          description: An array of offers
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/OfferItem'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ErrorItem'
+  /offers/{customerId}:
+    post:
+      summary: Submits a new offer.
+      description: |
+        Returns a list of offers for the specific owner of a device by
+        submitting the geo coordinates.
+      parameters:
+        - name: customerId
+          in: query
+          description: The customer that provides the offer.
+          required: true
+          type: number
+          format: int32
+        - name: newOfferItem
+          in: body
+          description: The customer that provides the offer.
+          required: true
+          type: object
+      responses:
+        200:
+        400:
+          description: Customer not found.
+  /{offerId}/purchases/paypal/{paypalId}:
+    post:
+      summary: Starts a paypal payment.
+      responses:
+        200:
+definitions:
+  ErrorItem:
+    properties:
+      code:
+        type: number
+        format: int32
+      message:
+        type: string
+      type:
+        type: string
+  OfferItem:
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string
+  NewOfferItem:
+    properties:
+      title:
+        type: string
+      description:
+        type: object
+      latitude:
+        type: number
+        format: double
+      longitude:
+        type: number
+        format: double
+  ContentItem:
+    properties:
+      mime:
+        type: string
+      content:
+        type: string
+  GeoItem:
+    title: Stores GEO data.
+    properties:
+      latitude:
+        type: number
+        format: double
+      longitude:
+        type: number
+        format: double
